@@ -6,6 +6,7 @@
 ![License](https://img.shields.io/badge/License-MIT-blue)
 ![Node](https://img.shields.io/badge/Node.js-18%2B-green)
 ![AI](https://img.shields.io/badge/AI-Ollama-orange)
+![Windows](https://img.shields.io/badge/Windows-11-0078D4)
 
 ---
 
@@ -42,44 +43,44 @@
 
 ---
 
-## 🚀 شروع سریع (۳ دقیقه)
+## 🚀 شروع سریع (Windows 11)
 
 ### پیش‌نیازها
 - **Windows 11**
 - **Node.js 18+** ([دانلود](https://nodejs.org))
 - **Ollama** ([دانلود](https://ollama.ai/download))
+- **64GB RAM** ✓ شما دارید!
+- **Ryzen 9 12-Core** ✓ شما دارید!
 
-### نصب خودکار (Windows)
+### نصب خودکار (۳ دقیقه)
+
 ```bash
-# ۱. Git Bash یا Command Prompt
+# 1. Git Bash را باز کن
 git clone https://github.com/YOUR_USERNAME/mamadtella-villa.git
 cd mamadtella-villa
 
-# ۲. اسکریپت نصب
+# 2. اسکریپت نصب را اجرا کن
 setup-windows.bat
 
-# ۳. منتظر بمان (۲-۳ دقیقه)
+# 3. منتظر بمان (خودکار همه کاری انجام می‌دهد)
 ```
 
-### نصب دستی
+### شروع سرویس‌ها
+
+**پنجره 1 - Ollama:**
 ```bash
-# ۱. Dependencies
-npm install
-
-# ۲. Ollama (باید قبلاً نصب باشد)
 ollama serve
-# در پنجره دوم:
-ollama pull mistral
-ollama pull neural-chat
+```
 
-# ۳. اجرای سرور
+**پنجره 2 - Server:**
+```bash
 npm start
 ```
 
 ### دسترسی
-- **کاربران**: http://localhost:118
-- **مدیریت**: http://localhost:118/admin
-- **Ollama API**: http://localhost:11434
+- 🔓 **کاربران**: http://localhost:118
+- 🔑 **مدیریت**: http://localhost:118/admin
+- 🤖 **Ollama API**: http://localhost:11434
 
 ### پسورد پیش‌فرض
 ```
@@ -90,209 +91,125 @@ Password: AdminTella@1404
 
 ---
 
-## 📋 تنظیمات
+## 📖 راهنمای کامل
 
-### `config.json` - تنظیمات سرور
-```json
-{
-  "server": {
-    "port": 118
-  },
-  "gate": {
-    "name": "درب حیاط",
-    "host": "10.10.10.99",
-    "port": 2000,
-    "payloadHex": "00 01 02 03 04 05 06 07 08 01 00 01 01 01 00 00 00 00 00 03 01 01 01",
-    "timeoutMs": 5000
-  },
-  "whisper": {
-    "enabled": true,
-    "ffmpegPath": "ffmpeg",
-    "whisperBinPath": "./whisper.cpp/main",
-    "whisperModelPath": "./models/ggml-large-v3-turbo-q5_0.bin",
-    "language": "fa"
-  }
-}
-```
-
-### `.env` - متغیرهای محیطی
-```bash
-# Ollama
-OLLAMA_HOST=http://localhost:11434
-OLLAMA_MODEL=mistral
-
-# SMS (اختیاری)
-SMS_ENABLED=false
-SMS_USERNAME=
-SMS_PASSWORD=
-SMS_BODYID=
-
-# Debug
-DEBUG=false
-LOG_LEVEL=info
-```
+- 📋 [نصب و راه‌اندازی](./INSTALLATION.md)
+- 🚀 [شروع سریع](./START.md)
+- 🔧 [تنظیمات](./CONFIG.md)
+- 🐛 [عیب‌یابی](./TROUBLESHOOTING.md)
 
 ---
 
-## 🎯 استفاده
+## 🎯 دستورات صوتی
 
-### 🔓 ورود کاربر
-1. برو به http://localhost:118
-2. یوزرنیم و پسورد را وارد کن
-3. از ماژول‌های دسترسی‌دار استفاده کن
+| دستور | نتیجه |
+|-------|-------|
+| "ممد تلا درب" | باز کردن درب |
+| "ممد تلا درب را ببند" | بستن درب |
+| "ممد تلا دوربین" | عکس فوری |
+| "ممد تلا پخش زنده" | استریم دوربین |
+| "ممد تلا روشن کن" | روشن کردن روشنایی |
+| "ممد تلا خاموش کن" | خاموش کردن |
 
-### 🔑 مدیریت
-1. برو به http://localhost:118/admin
-2. **ایجاد کاربر**: شماره + ماژول‌ها
-3. **مدیریت دوربین**: IP + احراز هویت
-4. **تنظیمات**: SMS، اطلاعات ویلا
+---
+
+## 📦 سخت‌افزار مورد نیاز
+
+| مورد | نیاز | شما ✓ |
+|------|------|--------|
+| RAM | 8GB+ | 64GB ✓ |
+| CPU | 4 Core | 12 Core ✓ |
+| GPU | اختیاری | GT430 ✓ |
+| OS | Windows 10+ | Windows 11 ✓ |
+| Storage | 50GB | ✓ |
+
+🔥 **شما سخت‌افزار فوق‌العاده دارید!**
+
+---
+
+## 💬 چت و صدا
+
+### 💬 چت عادی
+1. وارد شو
+2. بخش "دستیار هوشمند"
+3. سوالت رو بنویس
+4. جواب فوری دریافت کن
 
 ### 🎤 دستور صوتی
 1. دکمه 🎤 را فشار بده
 2. بگو: "**ممد تلا** درب را باز کن"
-3. سیستم اجرا می‌کند و پاسخ می‌دهد
-
-### 💬 چت با AI
-1. بخش "دستیار هوشمند" را باز کن
-2. سوالت رو بنویس یا بگو
-3. جواب فوری دریافت کن
+3. سیستم اجرا و پاسخ می‌دهد
 
 ---
 
-## 🛠️ API Endpoints
+## 🔧 API Endpoints
+
+### AI و چت
+```
+POST   /api/ai/chat              # چت (streaming)
+POST   /api/ai/voice-command     # دستور صوتی
+POST   /api/ai/transcribe        # تشخیص صدا
+GET    /api/ai/health            # وضعیت Ollama
+```
 
 ### کاربران
 ```
-POST   /api/login                    # ورود
-POST   /api/logout                   # خروج
-GET    /api/me                       # اطلاعات کاربر
-POST   /api/gate/toggle              # کنترل درب
-GET    /api/camera/{id}/snapshot     # عکس دوربین
-GET    /api/camera/{id}/stream       # استریم دوربین
-GET    /api/logs                     # لاگ کاربر
-```
-
-### AI
-```
-POST   /api/ai/chat                  # چت (streaming)
-POST   /api/ai/voice-command         # دستور صوتی
-POST   /api/ai/transcribe            # تشخیص صدا
-GET    /api/ai/health                # وضعیت Ollama
-GET    /api/ai/models                # لیست مدل‌ها
+POST   /api/login                # ورود
+GET    /api/me                   # اطلاعات
+POST   /api/gate/toggle          # کنترل درب
+GET    /api/camera/{id}/snapshot # عکس
+GET    /api/camera/{id}/stream   # استریم
 ```
 
 ### مدیریت
 ```
-POST   /api/admin/login              # ورود مدیر
-GET    /api/admin/users              # لیست کاربران
-POST   /api/admin/users              # ایجاد کاربر
-PUT    /api/admin/users/{id}         # ویرایش کاربر
-DELETE /api/admin/users/{id}         # حذف کاربر
-POST   /api/admin/cameras            # اضافه دوربین
-GET    /api/admin/logs               # تمام لاگ‌ها
+POST   /api/admin/login          # ورود مدیر
+GET    /api/admin/users          # لیست کاربران
+POST   /api/admin/users          # اضافه کاربر
+POST   /api/admin/cameras        # اضافه دوربین
 ```
 
 ---
 
-## 📦 مدل‌های Ollama
+## 🐛 رفع مشکلات
 
-### نصب
+### Ollama پاسخ نداد
 ```bash
-ollama pull mistral              # سریع (4GB)
-ollama pull neural-chat          # مکالمه (4GB)
-ollama pull llama2               # متوازن (3.5GB)
-ollama pull orca-mini            # خفیف (1.9GB)
-```
-
-### استفاده
-```bash
-# در config.json یا environment
-OLLAMA_MODEL=mistral
-```
-
----
-
-## 🔊 Whisper (تشخیص صدا)
-
-### دانلود مدل
-```bash
-# اجرای اسکریپت نصب
-./setup-windows.bat
-
-# یا دستی:
-mkdir models
-cd whisper.cpp
-make
-cd ..
-
-# دانلود مدل (۲GB)
-curl -L https://huggingface.co/openai/whisper-large-v3-turbo/resolve/main/ggml-large-v3-turbo-q5_0.bin -o models/ggml-large-v3-turbo-q5_0.bin
-```
-
----
-
-## 📊 ساختار Database
-
-```json
-{
-  "admin": {
-    "username": "admin",
-    "salt": "...",
-    "hash": "..."
-  },
-  "users": [
-    {
-      "id": "u_...",
-      "phone": "09...",
-      "username": "guest123",
-      "modules": ["gate", "camera"],
-      "cameraAccess": ["cam_123"],
-      "active": true,
-      "expiresAt": null
-    }
-  ],
-  "cameras": [
-    {
-      "id": "cam_...",
-      "name": "درب ورودی",
-      "host": "10.10.10.x",
-      "username": "admin",
-      "password": "****"
-    }
-  ],
-  "logs": [...]
-}
-```
-
----
-
-## 🐛 رفع‌مشکلات
-
-### ❌ "Ollama پاسخ نداد"
-```bash
-# چک کن Ollama اجرا شده؟
+# اول اجرا کن
 ollama serve
 
-# پورت ۱۱۴۳۴ باز است؟
-netstat -an | find "11434"
+# یا پورت تغییر بده
+set OLLAMA_HOST=http://localhost:11435
 ```
 
-### ❌ "نتیجه‌ای یافت نش��" (Whisper)
+### Port استفاده شده است
 ```bash
-# مدل دانلود شده؟
-ls models/ggml-*.bin
-
-# ffmpeg نصب است؟
-ffmpeg -version
+netstat -ano | findstr :118
+# یا پورت تغییر بده در config.json
 ```
 
-### ❌ "دوربین متصل نشد"
+### npm: command not found
 ```bash
-# IP دوربین درست؟
-ping 10.10.10.x
+# Node.js دوباره نصب کن
+https://nodejs.org
+```
 
-# یوزرنیم/پسورد درست؟
-curl http://10.10.10.x/cgi-bin/snapshot.cgi?channel=1
+---
+
+## 📚 مدل‌های Ollama
+
+| مدل | اندازه | سرعت | کیفیت |
+|-----|--------|------|-------|
+| Mistral | 4GB | ⚡⚡⚡ | ⭐⭐⭐⭐ |
+| Neural-Chat | 4GB | ⚡⚡⚡ | ⭐⭐⭐⭐ |
+| Llama2 | 3.5GB | ⚡⚡ | ⭐⭐⭐⭐⭐ |
+| Orca-Mini | 1.9GB | ⚡⚡⚡⚡ | ⭐⭐⭐ |
+
+```bash
+ollama pull mistral              # توصیه شده
+ollama pull neural-chat          # برای مکالمه
+ollama pull llama2               # بهترین کیفیت
+ollama pull orca-mini            # برای سیستم‌های ضعیف
 ```
 
 ---
@@ -318,32 +235,34 @@ MIT - آزادانه استفاده و توزیع کنید
 
 ---
 
-## 👨‍💻 توسعه‌دهندگان
-
-- **Architecture**: Hybrid Ollama + Node.js
-- **Language**: JavaScript (Node.js + Vanilla JS)
-- **UI**: Responsive + RTL Persian
-- **AI**: Ollama (Local LLM)
-- **Voice**: Whisper.cpp (Local STT) + Google TTS
-
----
-
 ## 🤝 مشارکت
 
 Issues و PR خوشرنگ! 🎉
 
 ---
 
+## 💡 نکات مهم
+
+✅ **Ollama** را **قبل** سرور شروع کن
+✅ **اولین رفع پسورد** الزامی است
+✅ **دوربین‌ها** نیاز به IP صحیح دارند
+✅ **Whisper** اختیاری است (بدون آن فقط متن کار می‌کند)
+✅ **Rate Limiting** برای امنیت فعال است
+
+---
+
 ## 📞 پشتیبانی
 
-- 📧 Issues: GitHub Issues
-- 💬 Discussions: GitHub Discussions
-- 🔧 Documentation: `/docs`
+- 🐛 Issues: [GitHub Issues](https://github.com/YOUR_USERNAME/mamadtella-villa/issues)
+- 💬 Discussions: [GitHub Discussions](https://github.com/YOUR_USERNAME/mamadtella-villa/discussions)
+- 📖 Wiki: [Documentation](https://github.com/YOUR_USERNAME/mamadtella-villa/wiki)
 
 ---
 
 **ساخته شده با ❤️ برای ویلای ممد تلا**
 
-**Last Updated**: 2024
-**Node Version**: 18+
-**Windows Version**: 11 (tested)
+**نسخه**: 2.1.0  
+**Node**: 18+  
+**Windows**: 11  
+**CPU**: Ryzen 9 3900 XT ✓  
+**RAM**: 64GB ✓

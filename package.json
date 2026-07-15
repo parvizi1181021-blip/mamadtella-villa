@@ -1,0 +1,40 @@
+{
+  "name": "mamadtella-villa",
+  "version": "2.1.0",
+  "description": "دستیار هوشمند ویلای ممد تلا - Smart Home Assistant with AI",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "set DEBUG=true && node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "smart-home",
+    "voice-control",
+    "ai",
+    "ollama",
+    "whisper",
+    "farsi",
+    "persian"
+  ],
+  "author": "Mamadtella Villa",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/mamadtella-villa.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_USERNAME/mamadtella-villa/issues"
+  },
+  "homepage": "https://github.com/YOUR_USERNAME/mamadtella-villa#readme"
+}

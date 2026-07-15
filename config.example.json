@@ -1,0 +1,24 @@
+{
+  "server": {
+    "port": 118,
+    "hostname": "localhost"
+  },
+  "gate": {
+    "name": "درب حیاط",
+    "host": "10.10.10.99",
+    "port": 2000,
+    "payloadHex": "00 01 02 03 04 05 06 07 08 01 00 01 01 01 00 00 00 00 00 03 01 01 01",
+    "timeoutMs": 5000
+  },
+  "whisper": {
+    "enabled": false,
+    "ffmpegPath": "ffmpeg",
+    "whisperBinPath": ".\\whisper.cpp\\main",
+    "whisperModelPath": ".\\models\\ggml-large-v3-turbo-q5_0.bin",
+    "language": "fa"
+  },
+  "sms": {
+    "enabled": false,
+    "provider": "melipayamak"
+  }
+}
